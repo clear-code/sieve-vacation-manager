@@ -1,0 +1,20 @@
+AllCops:
+  Exclude:
+    - "vendor/**/*"
+    - "cookbooks/postfix/**/*"
+    - "cookbooks/**/metadata.rb"
+
+Metrics/LineLength:
+  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/TrailingComma:
+  Enabled: false
+Style/FileName:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/WordArray:
+  Enabled: false
+Style/BarePercentLiterals:
+  EnforcedStyle: percent_q

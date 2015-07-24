@@ -1,0 +1,8 @@
+<link href="/css/logout.css" rel="stylesheet">
+<div class="container-fluid">
+  <form class="form-signout" action="/logout" method="post">
+    <h2 class="form-signout-heading"><%=h _("Logout") %></h2>
+    <input type="hidden" name="_method" value="delete">
+    <button class="btn btn-lg btn-danger btn-block" type="submit"><%=h _("Logout") %></button>
+  </form>
+</div>

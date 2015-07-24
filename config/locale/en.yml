@@ -1,0 +1,31 @@
+en:
+  errors:
+    format: "%{message}"
+
+    messages: &errors_messages
+      inclusion: "is not included in the list."
+      exclusion: "is reserved."
+
+  activerecord:
+    errors:
+      messages:
+        taken: "does already exists."
+        record_invalid: "Failed to save out of office auto-reply settings. %{errors}"
+        <<: *errors_messages
+      models:
+        user:
+          attributes:
+            email:
+              malformed_address: "The supplied e-mail address is not a valid one."
+        sieve_filter_setting:
+          attributes:
+            subject:
+              too_short: "Please set a subject."
+            reply_options:
+              blank: "No reply has been selected."
+            forwarding_address:
+              blank: "Please set a forwarding address."
+              malformed_address: "The supplied forwarding address is not a valid e-mail address."
+            begin_at: "The start of your abscence cannot be set later than its end date."
+            expired: "You cannot set an end date in the past."
+            mine: "You cannot set your own email as the forwarding address."

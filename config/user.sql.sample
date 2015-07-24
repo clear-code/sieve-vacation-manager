@@ -1,0 +1,4 @@
+grant all privileges on sieve_vacation_manager.* to sieve@localhost identified by 'sieve' with grant option;
+grant all privileges on sieve_vacation_manager_development.* to sieve@localhost identified by 'sieve' with grant option;
+grant all privileges on sieve_vacation_manager_test.* to sieve@localhost identified by 'sieve' with grant option;
+flush privileges;

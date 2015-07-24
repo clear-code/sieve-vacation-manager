@@ -1,0 +1,39 @@
+en:
+  # fixed-phrase: |
+  #   fixed phrase
+  login-page-notice: |
+    [notice] This app is internal web app.
+  reply-to-internal-mail: |
+    Automatically respond to e-mails from internal domains
+  reply-to-external-mail: |
+    Automatically respond to e-mails from external domains
+  reply-to-all-mail: |
+    Automatically respond to e-mails from all domains
+  internal-domains-annotation: |
+    Following domains are "internal":
+  out-of-office-example-subject: |-
+    (your name) is out of office.
+  out-of-office-example-body: |-
+    I will be back in office on 2015-06-01 and reply to your e-mail.
+  out-of-office-example-forwarding-address: |-
+    alice@example.com
+
+ja:
+  # fixed-phrase: |
+  #   固定の文章
+  login-page-notice: |
+    [注意] このアプリは内部専用です。
+  internal-domains-annotation: |
+    以下のドメインが「内部ドメイン」です:
+  reply-to-internal-mail: |
+    内部ドメインからのメールに自動返信する
+  reply-to-external-mail: |
+    外部ドメインからのメールに自動返信する
+  reply-to-all-mail: |
+    全てのメールに自動返信する
+  out-of-office-example-subject: |-
+    (あなたの名前）は不在にしております。
+  out-of-office-example-body: |-
+    2015/06/01に帰社しましてから、返答いたします。
+  out-of-office-example-forwarding-address: |-
+    alice@example.co.jp

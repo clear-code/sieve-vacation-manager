@@ -1,0 +1,29 @@
+<% if flash.has?(:error) %>
+  <div class="alert alert-danger text-center alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <%=h flash[:error] %>
+  </div>
+<% end %>
+<link href="/css/login.css" rel="stylesheet">
+<div class="container-fluid">
+  <div class="alert alert-warning text-center" role="alert"><h4 class="alert-heading"><%= @notice %></h4></div>
+  <form class="form-signin" action="/login" method="post">
+    <input name="authenticity_token" value="<%= session[:csrf] %>" type="hidden" />
+    <!--[if lt IE 9]>
+    <label for="inputEmail"><%=h _("Email address") %></label>
+    <![endif]-->
+    <input type="email" id="inputEmail" class="form-control" name="email" value="" placeholder="<%=h _("Email address") %>" required autofocus>
+    <!--[if lt IE 9]>
+    <label for="inputPassword"><%=h _("Password") %></label>
+    <![endif]-->
+    <input type="password" id="inputPassword" class="form-control" name="password" value="" placeholder="<%=h _("Password") %>" required>
+    <button class="btn btn-lg btn-info btn-block" type="submit"><%=h _("Accept and Login") %></button>
+  </form>
+  <div id="footer">
+    <div class="container text-center">
+      <p "text-muted credit">Version: <%= SieveVacationManager::VERSION %></p>
+    </div>
+  </div>
+</div>

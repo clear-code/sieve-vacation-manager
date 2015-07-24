@@ -1,0 +1,30 @@
+/* Move down content because we have a fixed navbar that is 60px tall */
+body {
+  padding-top: 60px;
+}
+h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+div.group-area {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding:15px;
+    margin-bottom: 3px;
+}
+div.vacation-tab {
+    padding:5px;
+}
+div.annotation {
+    margin: 10px;
+}
+legend {
+    padding: 3px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+button.apply-btn {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

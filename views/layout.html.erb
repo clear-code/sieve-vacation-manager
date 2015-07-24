@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%=h _("Out of Office Auto-Reply") %></title>
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="/css/sieve-vacation-manager.css" rel="stylesheet">
+    <link href="/css/vacation-settings.css" rel="stylesheet">
+    <link href="/css/jquery.datetimepicker.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <link href="/css/ie8style.css" rel="stylesheet">
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><%=h _("Out of Office Auto-Reply") %></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if session[:auth] %>
+              <li>
+                <p class="navbar-btn">
+                  <button class="btn btn-success btn-vacation-config" onclick="javascript:$('.form-vacation-config').submit();">
+                    <span><%=h _("Apply") %></span>
+                  </button>
+                </p>
+              </li>
+              <li class="dropdown">
+                <button class="navbar-btn btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-user"></i>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li>
+                    <a class="user-email" href="#"><%= session[:email] %></a>
+                  </li>
+                  <li>
+                    <form name="logout" class="form-signout" action="/logout" method="post">
+                      <input type="hidden" name="_method" value="delete"/>
+                      <button class="btn btn-default btn-logout" type="submit">
+			<span><%=h _("Logout") %></span>
+                      </button>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+            <% else %>
+              <li><a href="/login"><%=h _("Login") %></a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <%= yield %>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-toggle.js"></script>
+    <script src="/js/jquery.datetimepicker.js"></script>
+    <script src="/js/jstz.min.js"></script>
+    <script src="/js/jquery.cookie.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <script>
+      $('.datetimepicker-begin').datetimepicker({
+        lang: '<%= format_locale %>',
+        format: 'Y/m/d',
+        timepicker: false,
+        closeOnDateSelect: true
+      });
+      $('.datetimepicker-end').datetimepicker({
+        lang: '<%= format_locale %>',
+        format: 'Y/m/d',
+        timepicker: false,
+        closeOnDateSelect: true
+      });
+    </script>
+    <script>
+      jQuery(function() {
+        var tz = jstz.determine();
+        $.cookie('timezone', tz.name(), { path: '/' });
+      });
+    </script>
+    <script>
+      $('input.datetimepicker-begin').attr("readonly","readonly");
+      $('input.datetimepicker-end').attr("readonly","readonly");
+    </script>
+  </body>
+</html>

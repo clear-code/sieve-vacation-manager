@@ -1,0 +1,9 @@
+managesieve-server:
+  host: "192.168.33.23"
+  port: 4190
+  auth: PLAIN
+  tls: true
+internal-domains:
+  - "example.com"
+  - "example.co.jp"
+  - "example.net"

@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <% if @message %>
+    <div class="alert alert-success text-center alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <%=h @message %>
+    </div>
+  <% end %>
+  <a class="btn btn-default" href="/" role="button"><i class="glyphicon glyphicon-chevron-left"></i><%=h _("Back") %></a>
+  <% if @setting.forward || @setting.vacation %>
+    <div class="group-area sieve-setting">
+      <legend><%=h _("The period of absence") %></legend>
+      <h4><%=h _("From") %></h4>
+      <p class="datetime-begin"><%=h format_datetime(@setting.begin_at) %></p>
+      <h4><%=h _("To") %></h4>
+      <p class="datetime-end"><%=h format_datetime(@setting.end_at) %></p>
+      <% if @setting.vacation %>
+	<legend><%=h _("Reply to") %></legend>
+	<p><%= format_reply_options(@setting.reply_options) %></p>
+	<legend><%=h _("Subject") %></legend>
+	<p><%=h @setting.subject %></p>
+	<legend><%=h _("Body") %></legend>
+	<p><%=h @setting.body %></p>
+      <% end %>
+      <% if @setting.forward %>
+	<legend><%=h _("Forwarding address") %></legend>
+	<p class="forwarding-address"><%=h @setting.forwarding_address %></p>
+	<h4></h4>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="alert alert-warning text-center" role="alert">
+      <p><%=h _("There is no enabled settings.") %></p>
+    </div>
+  <% end %>
+</div>

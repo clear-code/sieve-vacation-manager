@@ -1,0 +1,8 @@
+name             "users"
+maintainer       "Kenji Okimoto"
+maintainer_email "okimoto@clear-code.com"
+license          "MIT"
+description      "Installs/Configures users and groups for virtual mail user"
+long_description "Installs/Configures users and groups for virtual mail user"
+version          "0.1.0"
+depends          "dovecot", ">= 0.0.0"

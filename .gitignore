@@ -1,0 +1,11 @@
+*.mo
+*.pot
+*.po.*
+*.edit.po
+/*.svbin
+/config/settings.yml
+/config/user.sql
+/log/
+/vendor/
+/.bundle/
+/.vagrant/

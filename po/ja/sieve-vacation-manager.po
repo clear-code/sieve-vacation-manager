@@ -1,0 +1,93 @@
+# Japanese translations for PACKAGE package.
+# Copyright (C) 2015 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2015-06-15 15:10+0900\n"
+"Last-Translator: Takuro Ashie <ashie@clear-code.com>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+
+msgid "Failed to login. Please check your Email address and password."
+msgstr "ログインに失敗しました。Eメールアドレスとパスワードを確認してください。"
+
+msgid "Successfully saved."
+msgstr "正常に保存しました。"
+
+msgid "Failed to save out of office auto-reply settings. "
+msgstr "不在通知設定に誤りがあります。 "
+
+msgid "Fail to put sieve filter. Reason: "
+msgstr "フィルターの設置に失敗しました。理由: "
+
+msgid "Enabled"
+msgstr "有効"
+
+msgid "Disabled"
+msgstr "無効"
+
+msgid "Input a period"
+msgstr "不在期間"
+
+msgid "Out of Office Auto-Reply Setting"
+msgstr "不在通知設定"
+
+msgid "Reply to"
+msgstr "返信"
+
+msgid "Subject"
+msgstr "件名"
+
+msgid "Body"
+msgstr "本文"
+
+msgid "Settings for Forwarding"
+msgstr "転送設定"
+
+msgid "Forwarding address"
+msgstr "転送するアドレス"
+
+msgid "Apply"
+msgstr "適用"
+
+msgid "Back"
+msgstr "戻る"
+
+msgid "The period of absence"
+msgstr "不在期間"
+
+msgid "From"
+msgstr ""
+
+msgid "To"
+msgstr ""
+
+msgid "There is no enabled settings."
+msgstr "有効な設定はありません。"
+
+msgid "Out of Office Auto-Reply"
+msgstr "不在通知設定"
+
+msgid "Logout"
+msgstr "ログアウト"
+
+msgid "Login"
+msgstr "ログイン"
+
+msgid "Email address"
+msgstr "Eメールアドレス"
+
+msgid "Password"
+msgstr "パスワード"
+
+msgid "Accept and Login"
+msgstr "同意してログイン"

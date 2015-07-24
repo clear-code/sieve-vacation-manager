@@ -1,0 +1,26 @@
+production:
+  adapter: mysql2
+  host: localhost
+  username: sieve
+  password: sieve
+  database: sieve_vacation_manager
+  reconnect: true
+  wait_timeout: 5
+
+development:
+  adapter: mysql2
+  host: localhost
+  username: sieve
+  password: sieve
+  database: sieve_vacation_manager_development
+  reconnect: true
+  wait_timeout: 5
+
+test:
+  adapter: mysql2
+  host: localhost
+  username: sieve
+  password: sieve
+  database: sieve_vacation_manager_test
+  reconnect: true
+  wait_timeout: 10

@@ -1,0 +1,31 @@
+ja:
+  errors:
+    format: "%{message}"
+
+    messages: &errors_messages
+      inclusion: "は一覧にありません。"
+      exclusion: "は予約されています。"
+
+  activerecord:
+    errors:
+      messages:
+        taken: "すでに存在します。"
+        record_invalid: "不在通知設定に誤りがあります。 %{errors}"
+        <<: *errors_messages
+      models:
+        user:
+          attributes:
+            email:
+              malformed_address: "指定されたメールアドレスは不正な形式です。"
+        sieve_filter_setting:
+          attributes:
+            subject:
+              too_short: "件名を入力して下さい。"
+            reply_options:
+              blank: "返信が選択されていません。"
+            forwarding_address:
+              blank: "転送するアドレスを入力して下さい。"
+              malformed_address: "指定されたメールアドレスは不正な形式です。"
+            begin_at: "開始日は終了日より未来の日付を指定できません。"
+            expired: "終了日が過去の日付になっています。"
+            not_mine: "転送アドレスに自分のメールアドレスは設定できません。"
